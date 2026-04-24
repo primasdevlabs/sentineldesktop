@@ -1,0 +1,9 @@
+{
+    "user_name": "Alex",
+    "preferences": {
+        "voice_style": "professional",
+        "timezone": "auto"
+    },
+    "facts": {},
+    "test_key": "test_value"
+}

@@ -1,0 +1,14 @@
+PyQt6
+PyOpenGL
+requests
+pyyaml
+pypubsub
+numpy
+sounddevice
+pvporcupine
+elevenlabs
+google-api-python-client
+google-auth-oauthlib
+psutil
+schedule
+nexttoken
