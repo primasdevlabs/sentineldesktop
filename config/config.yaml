@@ -1,0 +1,70 @@
+assistant:
+  nexttoken_api_key: "YOUR_NEXTTOKEN_API_KEY"
+  name: "Sentinel"
+  wake_word_sensitivity: 0.5
+  access_key: "YOUR_PICOVOICE_ACCESS_KEY" # User must provide this
+
+rhasspy:
+  url: "http://localhost:12101"
+
+tts:
+  engine: "elevenlabs"
+  voice_id: "IRHApOXLvnW57QJPQH2P"
+  stability: 0.5
+  similarity_boost: 0.75
+  balcon_path: "sentinel/bin/balcon.exe" # Fallback
+  voice: "Microsoft David Desktop"
+
+ui:
+  theme: "dark"
+  opacity: 0.9
+
+logging:
+  level: "INFO"
+  file: "sentinel/logs/assistant.log"
+
+clap_detection:
+  enabled: true
+  threshold: 0.7
+  min_interval_ms: 200
+  double_clap_window_ms: 500
+  cooldown_seconds: 2
+
+weather:
+  api_key: "YOUR_OPENWEATHERMAP_API_KEY"
+  city: "New York"
+
+email:
+  provider: "gmail"
+  credentials_path: "sentinel/config/credentials.json"
+  token_path: "sentinel/config/token.json"
+
+calendar:
+  provider: "google"
+
+notifications:
+  enabled: true
+
+conversation:
+  enabled: true
+  memory_size: 10
+  timeout_seconds: 300
+  mode: "api"
+  personality: "casual"
+  model: "gemini-3.1-flash-lite-preview"
+
+scheduler:
+  enabled: true
+  check_interval_seconds: 30
+
+automation:
+  allow_background_apps: true
+
+modules:
+  wake_word: true
+  clap_detector: true
+  stt: true
+  tts: true
+  scheduler: true
+  notification_watcher: false
+  proactive_engine: true
